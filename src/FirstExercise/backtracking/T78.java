@@ -10,6 +10,7 @@ public class T78 {
     LinkedList<Integer> path = new LinkedList<>();
 
     public List<List<Integer>> subsets(int[] nums) {
+        result.add(new ArrayList());
         backtracking(nums, 0);
         return result;
     }
@@ -17,12 +18,14 @@ public class T78 {
     private void backtracking(int[] nums, int startIndex) {
 
         if (startIndex == nums.length - 1) {
-            result.add(new ArrayList<>(path));
             return;
         }
 
         for (int i = startIndex; i < nums.length; i++) {
-
+            path.add(nums[i]);
+            result.add(new ArrayList<>(path));
+            backtracking(nums, i + 1);
+            path.removeLast();
         }
     }
 }
