@@ -35,7 +35,7 @@ public class T90 {
             path.add(nums[i]);
             result.add(new ArrayList<>(path));
             backtracking(nums, i + 1);
-            used[i] = false;
+            used[i] = false;//
             path.removeLast();
         }
     }
