@@ -16,7 +16,12 @@ public class T78 {
 
     private void backtracking(int[] nums, int startIndex) {
 
-        if (startIndex > nums.length - 1) {
+        if (startIndex == nums.length - 1) {
+            result.add(new ArrayList<>(path));
+            return;
+        }
+
+        for (int i = startIndex; i < nums.length; i++) {
 
         }
     }
