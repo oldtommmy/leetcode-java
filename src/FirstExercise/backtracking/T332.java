@@ -32,8 +32,21 @@ public class T332 {
             return true;
         }
 
-
-
+        String last = result.get(result.size() - 1);
+        if (map.containsKey(last)) {
+            for (Map.Entry<String, Integer> ticket : map.get(last).entrySet()) {
+                Integer count = ticket.getValue();
+                if (count > 0) {
+                    ticket.setValue(count - 1);
+                    result.add(ticket.getKey());
+                    if (backtracking(ticketNum)) {
+                        return true;
+                    }
+                    ticket.setValue(count);
+                    result.remove(result.size() - 1);
+                }
+            }
+        }
         return false;
     }
 }
