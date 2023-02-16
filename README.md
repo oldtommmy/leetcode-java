@@ -1,2 +1,2 @@
-# leetcode-first_exersice
+# leetcode java
 personal leetcode repository
