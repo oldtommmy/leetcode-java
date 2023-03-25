@@ -1,6 +1,5 @@
 package FirstExercise.backtracking;
 
-import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
